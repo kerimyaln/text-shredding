@@ -1,0 +1,43 @@
+/*A sentence that asks the user to program and print
+according to the order of the letters in the sentence
+the number of letters in the sentence entered java code.*/
+
+
+import java.util.Scanner;
+public class textShredding{
+static Scanner sc;
+	public static void main (String[]ars){
+		sc=new Scanner(System.in);
+		String sentence,control;	
+		control=" "; 
+		char op;
+		int index=0,k=0;
+		System.out.print("Enter a sentence: "); 
+		sentence=sc.nextLine();
+		sentence=sentence.toUpperCase();	
+	while(true){  
+		  if(index!=sentence.length()-1){
+		  op=sentence.charAt(index);
+	    if(dogru(op,control)){
+		  for(int f=0;f<sentence.length();f++){
+			if(op==sentence.charAt(f)) { 
+				k++; } }
+		        control+=op;
+		      System.out.println(op+" : "+k);
+		        k=0; }
+	            index++;	}
+			else{
+				break; } } }
+	
+	public static boolean dogru (char str,String array){
+                int d=0;
+		for(int a=0;a<array.length();a++){ 
+			if(str==array.charAt(a)) {
+				d++; } }
+		    if(d==0){
+			    return true; }
+		    else {
+			    return false; 
+			    }
+		  } 
+	}
