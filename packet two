@@ -1,0 +1,55 @@
+/*A sentence that asks the user and the java code 
+with the greatest number of letters in the sentence
+entered by printing letters at least until that case the program.*/
+
+
+import java.util.Scanner;
+public class test_ {
+static Scanner sc;
+	public static void main(String[] args) {
+		sc=new Scanner(System.in);
+
+		String dizi;
+		String dizi2=""; 
+	  char op='a';
+		char str='A';
+		System.out.print("Enter a sentence: ");
+		dizi=sc.nextLine();
+	int	index=0,deger=0;
+		while(index<dizi.length()){
+			if(dizi.charAt(index)==op||dizi.charAt(index)==str){
+				deger++; }
+			if(index==dizi.length()-1){
+				if(deger!=0){
+				dizi2+=(str+" : "+deger); }
+				if(str=='Z'){ break; }
+				 deger=0;
+			     index=-1;
+			     str++;
+			     op++; }
+			     index++; }
+	             index=4;
+		         str='0';
+		while(true){
+	if(index<=dizi2.length()-1){
+		if(str<=dizi2.charAt(index)){
+			str=dizi2.charAt(index); }
+		    index+=5; }
+	    else { break; } }  
+		    index=4;
+		while(true){
+			if(index<=dizi2.length()-1){
+				if(str==dizi2.charAt(index)){
+					System.out.println(dizi2.substring((index-4),index+1));	}
+				    index+=5; }
+			    else{
+				    str--;
+				if(str<'1')
+					break;
+				    index=4;
+				    } 
+			}
+		
+	  }
+
+}
