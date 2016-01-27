@@ -1,12 +1,25 @@
-*.class
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+//  Number of occurrences of the letters in the string !!!
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+import java.util.Scanner;
+public class textShredding{
+static Scanner sc;
+	public static void main(String[] args) {
+	   sc=new Scanner(System.in);
+         System.out.print("Enter a sentence: ");
+	   char op ='A',str='a'; int index=0,deger=0;  String dizi;
+	     dizi=sc.nextLine();
+	   System.out.println("Number of occurrences of the letters in the string:");
+while(index<dizi.length()){
+	
+        if(dizi.charAt(index)== str||dizi.charAt(index)==op){ deger++; }
+
+        if(index==dizi.length()-1){
+	     if(deger!=0){ System.out.println(op+" : "+deger); }
+	      if(str=='z'){ break; }
+	       deger=0;
+	       index=-1;
+	       str++;
+	       op++; }
+           index++;  }/* while sonu*/ } }
